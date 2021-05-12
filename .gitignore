@@ -1,0 +1,14 @@
+# system file
+.idea
+.DS_Store
+.vscode
+
+# hiyoko
+hiyoko/*
+!hiyoko/main.go
+!hiyoko/.realize.yaml
+
+# infra
+infra/.env
+# mysql
+infra/mysql/data/*
