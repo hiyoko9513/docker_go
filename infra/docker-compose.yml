@@ -4,11 +4,16 @@ services:
     build: ./go 
     ports:
       - 8080:8080
+      - 2345:2345
     tty: true 
     volumes:
       - ../hiyoko:/go/app
     depends_on:
       - db
+    # security_opt:
+    #   - apparmor:unconfined
+    # cap_add:
+    #   - SYS_PTRACE
 
   db:
     image: mysql:5.7

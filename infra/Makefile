@@ -11,7 +11,9 @@ down:
 restart:
 	@make down
 	@make up
-main-go:
+go-start:
 	docker-compose exec go go run main.go
 realize-start:
 	docker-compose exec go realize start
+air-start:
+	docker-compose exec go air

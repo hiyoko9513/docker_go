@@ -1,4 +1,4 @@
-FROM golang:1.15.2-alpine
+FROM golang:1.16-alpine
 
 WORKDIR /go/app
 
@@ -11,5 +11,10 @@ RUN set -eux \
   # && go get github.com/lib/pq 
 
 # realize
-RUN go get -u github.com/oxequa/realize 
-CMD ["realize", "start"]
+# RUN go get -u github.com/oxequa/realize 
+
+# air
+RUN go get -u github.com/cosmtrek/air
+
+# delve
+RUN go get -u github.com/go-delve/delve/cmd/dlv
